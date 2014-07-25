@@ -1,0 +1,32 @@
+var express = require('express');
+var app = express();
+var path = require('path');
+app.listen(8585);
+app.use(express.static(__dirname));
+var bodyParser = require('body-parser');
+var dbConnect = require('./dbConnection');
+//app.use(express.static(path.join(__dirname,'public')));
+app.use(bodyParser());
+app.get("/user", dbConnect.readAllUserFromDb);
+app.get("/user/:id", dbConnect.readSingleUserFromDb);
+app.post("/user", dbConnect.insertUserToDb);
+app.delete("/user", dbConnect.deleteAllUserFromDb);
+app.delete("/user/:id", dbConnect.deleteSingleUserFromDb);
+app.put("/user/:id", dbConnect.updateSingleUserFromDb);
+app.put("/user", dbConnect.updateAllUserFromDb);
+
+app.get("/admin", dbConnect.readAllAdminFromDb);
+app.get("/admin/:id", dbConnect.readSingleAdminFromDb);
+app.post("/admin", dbConnect.insertAdminToDb);
+app.delete("/admin", dbConnect.deleteAllAdminFromDb);
+app.delete("/admin/:id", dbConnect.deleteSingleAdminFromDb);
+app.put("/admin/:id", dbConnect.updateSingleAdminFromDb);
+app.put("/admin", dbConnect.updateAllAdminFromDb);
+
+app.get("/book", dbConnect.readAllBookFromDb);
+app.get("/book/:id", dbConnect.readSingleBookFromDb);
+app.post("/book", dbConnect.insertBookToDb);
+app.delete("/book", dbConnect.deleteAllBookFromDb);
+app.delete("/book/:id", dbConnect.deleteSingleBookFromDb);
+app.put("/book/:id", dbConnect.updateSingleBookFromDb);
+app.put("/book", dbConnect.updateAllBookFromDb);

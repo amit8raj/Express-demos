@@ -1,0 +1,148 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<link rel="stylesheet" type="text/css" href="test.css"/>
+<script type="text/javascript">
+    var a = document.login - form.uname;
+    var b = document.login - form.pass;
+    function validate() {
+        if ((a.value == null || a.value == "") && (b.value == null || b.value == "")) {
+            alert("Username and Password must be filled out");
+            return false;
+        }
+        if (a.value == null || a.value == "") {
+            alert("Username is required");
+            document.login - form.uname.focus();
+            return false;
+        }
+        if (b.value == null || b.value == "") {
+            alert("Password is required");
+            document.login - form.pass.focus();
+            return false;
+        }
+        if (!(/^[A-Za-z ]+$/i).test(a.value)) {
+            alert("First Name must contains alphabates");
+            document.login - form.uname.focus();
+            return false;
+        }
+        if ((b.value.length < 6)) {
+            alert("Password must have at least 6 characters");
+            document.login - form.pass.select();
+            return false;
+        }
+    }
+</script>
+<head>
+    <script type="text/javascript" src="validate.js">
+    </script>
+    <title>Connect Me</title>
+
+    <h1>
+        <center>Welcome To Connect Me</center>
+    </h1>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="mycss.css">
+</head>
+
+<body>
+<!-- <img id="imgadjust" src="8.gif"/> -->
+<div class="row">
+    <div id="wrapper" class="col-lg-8 col-md-7 col-sm-6">
+        <center><h1 class="header">Login Me</h1></center>
+        <form name="login-form" class="login-form" method="post"  method="post">
+            <div class="header">
+                <h1>
+                    <center>Connect Me</center>
+                </h1>
+            </div>
+            <center>
+                <div class="content">
+                    <input name="uname" type="text" class="input username" id="Uname" placeholder="User Name">
+
+                    <div class="user-icon"></div>
+                    <input name="pass" type="password" class="input password" id="Pass" placeholder="Password">
+
+                    <div class="pass-icon"></div>
+                </div>
+            </center>
+
+            <div class="footer">
+                <center>
+                    <input type="submit" name="submit" value="Login" id="btn1">
+                </center>
+            </div>
+
+        </form>
+    </div>
+
+
+    <div id="registerDiv" class="col-lg-4 col-md-5 col-sm-6">
+        <h1 class="header"> &nbsp; &nbsp;&nbsp; &nbsp; Register Me</h1>
+
+        <form class="form-horizontal">
+            <div class="form-group">
+                <div class="col-lg-10">
+                    <input type="text" class="form-control" id="fname" placeholder="FirstName">
+                    <br>
+                    <input type="text" class="form-control" id="lname" placeholder="LastName">
+                    <br>
+                    <input type="text" class="form-control" id="pwd" placeholder="Password">
+                    <br>
+                    <input type="text" class="form-control" id="confirmpwd" placeholder="Confirm Password">
+                    <br>
+                    <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+                    <br>
+                </div>
+                <div class="col-lg-10">
+                    <div class="radio">
+                        &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
+                        <input type="radio" name="optionsRadios" id="radio1" value="Male" checked="checked">
+                        Male
+                        &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
+                        <input type="radio" name="optionsRadios" id="radio2" value="Female">
+                        Female
+                    </div>
+                </div>
+            </div>
+            <!--<div class="form-group">
+                <label for="select" class="col-lg-2 control-label">Selects</label>
+
+                <div class="col-lg-10">
+                    <select class="form-control" id="select">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                    <br>
+                    <select multiple="" class="form-control">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+            </div>
+            -->
+            <div class="form-group">
+                <div class="col-lg-10 col-lg-offset-2">
+                    <button class="btn btn-default">Leave It</button>
+                    &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
+                    <button type="submit" class="btn btn-primary" onclick="this.form.action=registerMe.html">Register</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="gradient">
+        <br><br><br><br><br><br><br><br><br><br>
+        <center>
+        <h2 class="header"><- Login Here</h2>
+        </marquee>
+        <h2 class="header">Register Here -></h2>
+        </marquee>
+        </center>
+    </div>
+</div>
+</body>
+</html>

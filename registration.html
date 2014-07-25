@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<link rel="stylesheet" type="text/css" href="newcheck.css"/>
+<script type="text/javascript" src="regvalidate.js">
+</script>
+<head>
+    <title>CDAC-Noida IMIS</title>
+    <br/><br/>
+    <font color="DarkSlateGray">
+        <center><h1>INTERNATIONAL MANAGEMENT INFORMATION SYSTEM</h1></center>
+        <br/><br/>
+        <center><h1>CDAC Noida</h1></center>
+    </font>
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="This is my page">
+    <!--
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    -->
+</head>
+<body onload="document.reg-form.fname.focus();">
+
+<center>
+    <form name="reg-form" onsubmit="return validate();" class="login-form" action="registration.jsp" method="post">
+
+        <div class="header">
+            <h1>Register to IMIS</h1>
+
+
+            <div class="content">
+
+                <table width="300" cellpadding="5" height="340" style="height: 340px;">
+
+                    <tbody>
+                    <tr>
+                        <td>First Name</td>
+                        <td><input type="text" id="fname" name="fname"/></td>
+                        <td><span id="p1" style="visibility:hidden;">* First name is required</span></td>
+                    </tr>
+                    <tr>
+                        <td>Last Name</td>
+                        <td><input type="text" name="lname" value=""/></td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td><input type="text" name="email" value=""/></td>
+                    </tr>
+                    <tr>
+                        <td>User Name</td>
+                        <td><input type="text" name="uname" value=""/></td>
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td><input type="password" name="pass" value=""/></td>
+                    </tr>
+                    <tr>
+                        <td>Id Category</td>
+                        <td><select name="idcategory">
+                            <option value="student">Student</option>
+                            <option value="employee">Employee</option>
+                        </select></td>
+                    </tr>
+                    <tr class="footer">
+                        <td><input type="submit" name="submit" value="Register" class="button"/></td>
+                        <td><input type="reset" name="submit" value="Reset" class="button"/></td>
+
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <center>Already registered!!<a href="index.jsp">Login Here</a></center>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+
+            </div>
+    </form>
+</center>
+</div>
+</body>
+</html>
